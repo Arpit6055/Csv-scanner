@@ -8,6 +8,7 @@ This is a CSV FILE SCANNING app using Node.js, Express, Passport, Mongoose, EJS 
 Open ".env.example" and add your MongoDB URI, local or Atlas and other credentials and then change the file name to ".env"
 
 ### Usage
+Download this repository and open the downloaded repo on your terminal. After that edit .env.example file as mentioned above, Put your credentials in .env file and the run the following command in your terminal 
 
 ```sh
 $ npm install
