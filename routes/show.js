@@ -14,7 +14,7 @@ router.get('/:uuid', ensureAuthenticated, async (req, res) => {
         return res.render('download', { uuid: file.uuid, fileName: file.filename, user: req.user.name,fileSize: file.size, downloadLink: `${process.env.APP_BASE_URL}/files/download/${file.uuid}` });
      
     } catch(err) {
-        return res.render('download', { error: 'Something went wrong.'});
+        return res.render('dashboard');
     }
 });
 
@@ -27,7 +27,7 @@ router.get('/read/:uuid', ensureAuthenticated, async (req, res) => {
      
     } catch(err) {
         console.log(err);
-        return res.render('read', { error: 'Something went wrong.'});
+        return res.render('dashboard');
     }
 });
 
@@ -42,7 +42,7 @@ router.get('/delete/:uuid', ensureAuthenticated, async (req, res) => {
         res.redirect('/dashboard')
      
     } catch(err) {
-        return res.render('/dashboard', { error: 'Something went wrong.'});
+        return res.render('/dashboard');
     }
 });
 
